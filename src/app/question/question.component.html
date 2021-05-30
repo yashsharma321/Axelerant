@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title id="example-radio-group-label" *ngIf="!isSuccessMessage">Who is your favorite author?</mat-card-title>
+  <mat-radio-group *ngIf="!isSuccessMessage" aria-labelledby="example-radio-group-label" class="example-radio-group"
+    [(ngModel)]="favoriteAuthor">
+    <mat-radio-button class="example-radio-button" *ngFor="let answer of answers" [value]="answer">
+      {{answer.value}}
+    </mat-radio-button>
+    <div class="button-row">
+      <button mat-button mat-stroked-button color="primary" (click)="onSubmit(favoriteAuthor)">Submit</button>
+    </div>
+  </mat-radio-group>
+  <mat-card-content *ngIf="isSuccessMessage"><span>Thank You! Your Response has been submited successfully.</span>
+    <div style="text-align: center; margin-top: 30px;"><a href="#">Back</a> <a style="margin-left: 10px;" href="/report">View Report</a></div>
+
+  </mat-card-content>
+</mat-card>

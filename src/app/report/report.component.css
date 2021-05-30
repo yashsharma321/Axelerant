@@ -1,0 +1,21 @@
+.mat-card {
+    width: 60%;
+    margin-left: 15rem;
+    margin-top: 2rem;
+    height: 70vh;
+}
+.mat-grid-tile {
+    padding: 1rem;
+}
+.mat-card-content {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.mat-card-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 3.5rem;
+}
+::ng-deep .mat-grid-tile .mat-figure {
+    align-items: flex-end !important;
+}

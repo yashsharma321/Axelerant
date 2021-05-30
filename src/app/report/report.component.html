@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>REPORT</mat-card-title>
+    <mat-grid-list cols="2" rowHeight="3:1">
+        <mat-grid-tile>
+            <mat-card-content>
+                <div class="report" [style.background-color]="result[0].bgColor">
+                    <span>Miguel de cervantes - </span>
+                    <span>(<b>{{result[0].count}}</b>)</span>
+                </div>
+                <div class="report" [style.background-color]="result[1].bgColor">
+                    <span>Charies Dickens - </span>
+                    <span>(<b>{{result[1].count}}</b>)</span>
+                </div>
+                <div class="report" [style.background-color]="result[2].bgColor">
+                    <span>J.R.R Tolklen - </span>
+                    <span>(<b>{{result[2].count}}</b>)</span>
+                </div>
+                <div class="report" [style.background-color]= "result[3].bgColor">
+                    <span>Antoine de Saint-Exuper - </span>
+                    <span>(<b>{{result[3].count}}</b>)</span>
+                </div>
+            </mat-card-content>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="chart-wrapper">
+                <canvas baseChart 
+                [data]="pieChartData" 
+                [labels]="pieChartLabels" 
+                [chartType]="pieChartType"
+                [plugins]="pieChartPlugins"
+                [legend]="pieChartLegend">
+              </canvas>
+            </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+     <div style="text-align: center; margin-top: 40px;"><a href="#">Back</a></div> 
+</mat-card>
